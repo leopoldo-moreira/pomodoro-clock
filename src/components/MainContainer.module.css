@@ -7,6 +7,9 @@
     border-radius: 2em;
     display: flex;
     padding: 1em;
+    min-height: 350px;
+    justify-content: center;
+    align-items: center;
 }
 
 .quotes{
@@ -17,6 +20,7 @@
     color: white;
     font-family: Montserrat, sans-serif;
     font-size: 34px;
+    text-align: center;
 }
 
 .quotes span{

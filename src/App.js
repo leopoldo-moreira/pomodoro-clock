@@ -1,7 +1,7 @@
 import './App.css';
 import MainContainer from './components/MainContainer';
 import { useState, useEffect } from 'react';
-import Loading from './img/loading.svg'
+import Loading from './components/Loading'
 
 function App() {
   // paleta cores background body azul? -> #397097, amarelo -> #876D43, rosa? -> #744c71
@@ -30,9 +30,8 @@ function App() {
         type="quote"
         quote={quotes[0]['quote']}
         author={quotes[0]['author']}/>
-      : <h1>leo</h1>}
-
-      <Loading/>
+      : <MainContainer type="loading"/>}
+           
     </div>
   );
 }

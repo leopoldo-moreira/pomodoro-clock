@@ -1,4 +1,5 @@
 import styles from './MainContainer.module.css'
+import Loading from './Loading'
 
 function MainContainer({type, quote, author}){
     return(
@@ -9,6 +10,10 @@ function MainContainer({type, quote, author}){
                     <span>- {author}</span>
                 </div>
             )}
+
+            {type === "loading" && <Loading/>}
+
+
         </div>
     )
 }
