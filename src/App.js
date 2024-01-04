@@ -30,7 +30,8 @@ function App() {
        type="greeting"
        time="13:39"
        temp="26"   
-       greetingMsg="Good Evening"    
+       greetingMsg="Good Evening"   
+       city="Santana de Parnaiba" 
        />
            
     </div>
