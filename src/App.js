@@ -25,12 +25,13 @@ function App() {
 
   return (
     <div className="App">
-      {quotes ?
-       <MainContainer
-        type="quote"
-        quote={quotes[0]['quote']}
-        author={quotes[0]['author']}/>
-      : <MainContainer type="loading"/>}
+
+      <MainContainer
+       type="greeting"
+       time="13:39"
+       temp="26"   
+       greetingMsg="Good Evening"    
+       />
            
     </div>
   );
