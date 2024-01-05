@@ -19,9 +19,9 @@ function MainContainer({type, quote, author, greetingMsg, btnTxt, time, temp, ci
                 type === "greeting" && (
                     <>
                         <div className={styles.dateAndTime}>                       
-                            <span>It's now {time}</span>
-                            <span>{city}</span>
-                            <span>{temp} °C</span>
+                            <div><span>It's now {time}</span></div>
+                            <div><span>{city}</span></div>
+                            <div><span>{temp} °C</span></div>
                         </div>
                         <h1>{greetingMsg}</h1>
                         <button></button>

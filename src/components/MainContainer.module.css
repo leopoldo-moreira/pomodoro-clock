@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .mainContainer{
-    width: 600px;    
+    width: 700px;    
     background-color: rgba(255, 255, 255, 0.1);
     margin: 5em auto;
     border-radius: 2em;
     display: flex;
     padding: 1em;
-    min-height: 350px;
+    min-height: 450px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -39,25 +39,26 @@ h1{
 .dateAndTime{    
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;   
-    width: 100%;       
-    padding: 2em 0em;
-    border: 1px solid blue;
+    width: 96%;       
+    padding: 1em 0;      
+    margin: 1em;    
 }
 
-.dateAndTime span:nth-child(1) {    
-    float: left;
-    margin-left: 0em;
+.dateAndTime div:nth-child(1) {     
+    width: 20%;
+    text-align: center;
   }
 
-  .dateAndTime span:nth-child(2) {    
-     text-align: center;
-
+  .dateAndTime div:nth-child(2) {    
+    width: 58%;    
+    text-align: center;
   }
 
-.dateAndTime span:nth-child(3) {    
-    float: right;
-    margin-right: 0em;
+.dateAndTime div:nth-child(3) {    
+    width: 22%;    
+    text-align: center;
   }
