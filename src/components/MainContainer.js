@@ -1,5 +1,7 @@
 import styles from './MainContainer.module.css'
 import Loading from './Loading'
+import Button from './Button'
+
 
 function MainContainer({type, quote, author, greetingMsg, btnTxt, time, temp, city}){
     return(
@@ -19,12 +21,12 @@ function MainContainer({type, quote, author, greetingMsg, btnTxt, time, temp, ci
                 type === "greeting" && (
                     <>
                         <div className={styles.dateAndTime}>                       
-                            <div><span>It's now {time}</span></div>
+                            <div><span>{time}</span></div>
                             <div><span>{city}</span></div>
                             <div><span>{temp} °C</span></div>
                         </div>
                         <h1>{greetingMsg}</h1>
-                        <button></button>
+                        <Button text="Começar agora"/>
                     </>                    
                 )
             }

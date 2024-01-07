@@ -6,7 +6,7 @@
     margin: 5em auto;
     border-radius: 2em;
     display: flex;
-    padding: 1em;
+    padding: 0em;
     min-height: 450px;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,8 @@ h1{
     color: white;
     font-family: Montserrat, sans-serif;
     font-size: 34px;
-    text-align: center;
+    text-align: center;   
+
 }
 
 .quotes{
@@ -45,20 +46,28 @@ h1{
     top: 0;   
     width: 96%;       
     padding: 1em 0;      
-    margin: 1em;    
+    margin: 1em; 
+
 }
 
 .dateAndTime div:nth-child(1) {     
     width: 20%;
     text-align: center;
-  }
+}
 
-  .dateAndTime div:nth-child(2) {    
-    width: 58%;    
+.dateAndTime div:nth-child(2) {    
+    width: 60%;    
     text-align: center;
-  }
+    position: relative;
+    left: 0px;   
+        
+}
+
+.clock{
+    color: white;    
+}
 
 .dateAndTime div:nth-child(3) {    
-    width: 22%;    
+    width: 20%;    
     text-align: center;
   }

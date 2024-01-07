@@ -28,9 +28,9 @@ function App() {
 
       <MainContainer
        type="greeting"
-       time="13:39"
+       time="21:59:52"
        temp="26"   
-       greetingMsg="Good Evening"   
+       greetingMsg="Boa Noite"   
        city="Santana de Parnaiba" 
        />
            
