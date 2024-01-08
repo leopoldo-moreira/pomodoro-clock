@@ -9,7 +9,7 @@ function Greeting({data}) {
                 <div><span>{data.city}</span></div>
                 <div><span>{data.temp} °C</span></div>
             </div>
-            <h1>{data.greetingMsg}</h1>
+            <h1 className={styles.title}>{data.greetingMsg}</h1>
             <Button text="Começar agora"/>
         </>
     )

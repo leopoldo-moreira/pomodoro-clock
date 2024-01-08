@@ -10,6 +10,10 @@
     margin: 1em; 
 }
 
+.title{
+    margin: 3em;
+}
+
 .dateAndTime div:nth-child(1) {     
     width: 20%;
     text-align: center;

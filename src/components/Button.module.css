@@ -3,7 +3,7 @@
 .button{
     height: 3em;
     width: 10em;
-    background-color: inherit;
+    background-color: #5F8CAC;
     border-radius: 40px;
     color: white;
     cursor: pointer;
@@ -11,9 +11,8 @@
     font-size: 24px;
     font-weight: bold;
     border: none;
-    transition: .1s;
-    position: relative;
-    top: 50px;
+    transition: .1s;    
+    margin: .2em .2em;
 }
 
 .button:hover{
