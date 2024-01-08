@@ -1,0 +1,28 @@
+.dateAndTime{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;   
+    width: 96%;       
+    padding: 1.5em 0;      
+    margin: 1em; 
+}
+
+.dateAndTime div:nth-child(1) {     
+    width: 20%;
+    text-align: center;
+}
+
+.dateAndTime div:nth-child(2) {    
+    width: 60%;    
+    text-align: center;
+    position: relative;
+    left: 0px;           
+}
+
+.dateAndTime div:nth-child(3) {    
+    width: 20%;    
+    text-align: center;
+  }

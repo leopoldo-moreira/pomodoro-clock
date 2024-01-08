@@ -1,0 +1,8 @@
+.quotes{
+    margin: 5em auto;
+}
+
+.quotes span{    
+    float: right;    
+    margin-top: 2em;
+}

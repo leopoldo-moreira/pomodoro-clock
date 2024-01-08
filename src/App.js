@@ -1,7 +1,6 @@
 import './App.css';
 import MainContainer from './components/MainContainer';
 import { useState, useEffect } from 'react';
-import Loading from './components/Loading'
 
 function App() {
   // paleta cores background body azul? -> #397097, amarelo -> #876D43, rosa? -> #744c71
@@ -23,16 +22,20 @@ function App() {
 
   },[])
 
+  const generalData = {
+    type: 'greeting',
+    time: '21:59:52',
+    temp: '26',
+    greetingMsg: 'Boa Noite',
+    city: 'Santana de Parnaiba',
+    author: 'Leopoldo',
+    quote: 'pra morrer basta estar vivo'
+  }
+
   return (
     <div className="App">
 
-      <MainContainer
-       type="greeting"
-       time="21:59:52"
-       temp="26"   
-       greetingMsg="Boa Noite"   
-       city="Santana de Parnaiba" 
-       />
+      <MainContainer data={generalData} />
            
     </div>
   );

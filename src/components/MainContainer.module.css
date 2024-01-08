@@ -24,50 +24,5 @@ h1{
     color: white;
     font-family: Montserrat, sans-serif;
     font-size: 34px;
-    text-align: center;   
-
-}
-
-.quotes{
-    margin: 5em auto;
-}
-
-.quotes span{    
-    float: right;    
-    margin-top: 2em;
-}
-
-.dateAndTime{    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;   
-    width: 96%;       
-    padding: 1em 0;      
-    margin: 1em; 
-
-}
-
-.dateAndTime div:nth-child(1) {     
-    width: 20%;
     text-align: center;
 }
-
-.dateAndTime div:nth-child(2) {    
-    width: 60%;    
-    text-align: center;
-    position: relative;
-    left: 0px;   
-        
-}
-
-.clock{
-    color: white;    
-}
-
-.dateAndTime div:nth-child(3) {    
-    width: 20%;    
-    text-align: center;
-  }
