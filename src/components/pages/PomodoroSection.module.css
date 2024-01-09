@@ -1,0 +1,17 @@
+.counterContainer{
+    
+}
+
+.counterContainer h1{
+    font-size: 64px;
+    margin: 0;
+       
+}
+
+.controlPanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+

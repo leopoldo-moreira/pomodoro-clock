@@ -7,6 +7,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import TimeSection from './pages/TimeSection'
 import ChoosePeriods from './pages/ChoosePeriods'
 import WannaMusic from './pages/WannaMusic'
+import PomodoroSection from './pages/PomodoroSection'
 
 
 function MainContainer({ data }) {
@@ -19,7 +20,7 @@ function MainContainer({ data }) {
         <div className={styles.mainContainer}>
             {/*TODO fazer uma funcao para saber quando usar o botao "voltar"*/}
             { data.type !== "greeting" &&  data.type !=="quote" && data.type && data.type !== "PomodoroSection" &&
-                <FaArrowLeft/>
+                <FaArrowLeft className={styles.backArrow}/>
             }
 
             {
@@ -58,6 +59,12 @@ function MainContainer({ data }) {
             {
                 data.type === "music" && (                                        
                     <WannaMusic data={data}/>
+                )
+            }
+
+            {
+                data.type === "PomodoroSection" && (                                        
+                    <PomodoroSection data={data}/>
                 )
             }
 

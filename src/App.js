@@ -29,7 +29,7 @@ function App() {
     greetingMsg: 'Boa Noite',
     city: 'Santana de Parnaiba',
     author: 'Leopoldo',
-    quote: 'pra morrer basta estar vivo' //TODO fix this
+    quote: 'pra morrer basta estar vivo'
   }
 
   return (

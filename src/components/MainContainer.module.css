@@ -14,20 +14,24 @@
     position: relative;
 }
 
-.mainContainer svg{
+svg{
     color: white;
     cursor: pointer;
     transition: .3s;    
     height: 2em;
     width: 2em;    
-    padding: .5em;  
+    padding: .5em; 
+}
+
+.backArrow{     
     position: absolute;  
     top: 30px;
     left: 30px;
 }
-.mainContainer svg:hover{
+svg:hover{
     border-radius: 5em;
     background-color: #5786A8;
+    border: none;    
 }
 
 span{
