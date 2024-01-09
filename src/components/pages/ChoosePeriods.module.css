@@ -1,0 +1,15 @@
+.periodContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    margin-top: 1em;
+}
+
+.periodContainer h1{
+    margin:0;
+}
+
+.periodContainer input{
+    margin: 1em;
+}
+

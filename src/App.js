@@ -23,7 +23,7 @@ function App() {
   },[])
 
   const generalData = {
-    type: 'timeSection',
+    type: 'quote',
     time: '21:59:52',
     temp: '26',
     greetingMsg: 'Boa Noite',

@@ -5,6 +5,8 @@ import QuoteSection from './pages/QuoteSection'
 import ChooseActivity from './pages/ChooseActivity'
 import { FaArrowLeft } from "react-icons/fa";
 import TimeSection from './pages/TimeSection'
+import ChoosePeriods from './pages/ChoosePeriods'
+import WannaMusic from './pages/WannaMusic'
 
 
 function MainContainer({ data }) {
@@ -15,7 +17,7 @@ function MainContainer({ data }) {
 
     return (
         <div className={styles.mainContainer}>
-            { data.type !== "greeting" && 
+            { data.type !== "greeting" &&  data.type !=="quote" &&
                 <FaArrowLeft/>
             }
 
@@ -43,6 +45,18 @@ function MainContainer({ data }) {
             {
                 data.type === "timeSection" && (                                        
                     <TimeSection data={data}/>
+                )
+            }
+
+            {
+                data.type === "periods" && (                                        
+                    <ChoosePeriods data={data}/>
+                )
+            }
+
+            {
+                data.type === "music" && (                                        
+                    <WannaMusic data={data}/>
                 )
             }
 
