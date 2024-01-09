@@ -23,13 +23,13 @@ function App() {
   },[])
 
   const generalData = {
-    type: 'quote',
+    type: 'PomodoroSection',
     time: '21:59:52',
     temp: '26',
     greetingMsg: 'Boa Noite',
     city: 'Santana de Parnaiba',
     author: 'Leopoldo',
-    quote: 'pra morrer basta estar vivo'
+    quote: 'pra morrer basta estar vivo' //TODO fix this
   }
 
   return (

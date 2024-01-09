@@ -1,3 +1,5 @@
+// TODO os componentes da pagina page precisa seguir um padrao de nome, terminando com section
+
 import Button from '../Button'
 import styles from './ChooseActivity.module.css'
 

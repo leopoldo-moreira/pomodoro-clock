@@ -17,7 +17,8 @@ function MainContainer({ data }) {
 
     return (
         <div className={styles.mainContainer}>
-            { data.type !== "greeting" &&  data.type !=="quote" &&
+            {/*TODO fazer uma funcao para saber quando usar o botao "voltar"*/}
+            { data.type !== "greeting" &&  data.type !=="quote" && data.type && data.type !== "PomodoroSection" &&
                 <FaArrowLeft/>
             }
 
