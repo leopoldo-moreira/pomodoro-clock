@@ -1,13 +1,10 @@
 import styles from './InputNumber.module.css'
 
-function InputNumber({text}){
+function InputNumber({text, setValue}){
     return(
         <div className={styles.inputContainer}>
             <span>{text}</span>
-            <input 
-                
-                type="number"                    
-                />
+            <input type="number" value={setValue} />
         </div>
     )
 }
