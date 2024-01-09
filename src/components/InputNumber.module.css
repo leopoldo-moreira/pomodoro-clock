@@ -1,0 +1,23 @@
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 100px;
+}
+
+.inputContainer input{
+    width: 100px;    
+    font-size: 32px;    
+    padding: 10px;
+    margin: 0; 
+    outline: none; 
+    border: none; 
+    background-color: rgb(239, 239, 239);
+    box-shadow: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.inputContainer span{
+    width: 100%;
+}
