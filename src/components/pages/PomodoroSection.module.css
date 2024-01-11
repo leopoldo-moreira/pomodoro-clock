@@ -1,17 +1,39 @@
 .counterContainer{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gearEdit{
+    position: absolute;
+    right: 30px;
+    top: 30px;
 }
 
 .counterContainer h1{
-    font-size: 64px;
-    margin: 0;
-       
+    font-size: 70px;
+    margin: .2em; 
+    
 }
 
 .controlPanel{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 1em;
+    flex-direction: row;    
+    opacity: 0.3;
+    transition: .5s;        
+    justify-content: center;   
+    position: relative;
+    padding: .3em;
+    
 }
 
+.controlPanel:hover{
+    opacity: 1;
+    background-color: #5786A8;
+    border-radius: 40px;
+}
+
+.controlPanel svg:hover{
+    opacity: .1;
+}

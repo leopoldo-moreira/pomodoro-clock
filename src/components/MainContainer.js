@@ -11,12 +11,8 @@ import PomodoroSection from './pages/PomodoroSection'
 
 
 function MainContainer({ data }) {
-
-
-   
-
-
-    return (
+    
+        return (
         <div className={styles.mainContainer}>
             {/*TODO fazer uma funcao para saber quando usar o botao "voltar"*/}
             { data.type !== "greeting" &&  data.type !=="quote" && data.type && data.type !== "PomodoroSection" &&
