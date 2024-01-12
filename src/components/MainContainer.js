@@ -8,6 +8,7 @@ import TimeSection from './pages/TimeSection'
 import ChoosePeriods from './pages/ChoosePeriods'
 import WannaMusic from './pages/WannaMusic'
 import PomodoroSection from './pages/PomodoroSection'
+import GoodByeSection from './pages/GoodByeSection'
 
 
 function MainContainer({ data }) {
@@ -15,7 +16,7 @@ function MainContainer({ data }) {
         return (
         <div className={styles.mainContainer}>
             {/*TODO fazer uma funcao para saber quando usar o botao "voltar"*/}
-            { data.type !== "greeting" &&  data.type !=="quote" && data.type && data.type !== "PomodoroSection" &&
+            { data.type !== "greeting" &&  data.type !=="quote" && data.type !== 'GoodByeSection' && data.type && data.type !== "PomodoroSection" &&
                 <FaArrowLeft className={styles.backArrow}/>
             }
 
@@ -61,6 +62,12 @@ function MainContainer({ data }) {
             {
                 data.type === "PomodoroSection" && (                                        
                     <PomodoroSection data={data}/>
+                )
+            }
+
+            {
+                data.type === "GoodByeSection" && (                                        
+                    <GoodByeSection data={data}/>
                 )
             }
 
