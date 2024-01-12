@@ -13,8 +13,7 @@
 
 .counterContainer h1{
     font-size: 70px;
-    margin: .2em; 
-    
+    margin: .2em;     
 }
 
 .controlPanel{
@@ -36,4 +35,11 @@
 
 .controlPanel svg:hover{
     opacity: .1;
+}
+
+.progressBar{
+    width: 100%;
+    position: relative;
+    top: 30px;
+    
 }

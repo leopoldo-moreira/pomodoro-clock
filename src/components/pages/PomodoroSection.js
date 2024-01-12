@@ -5,7 +5,8 @@ import { GrPowerReset } from "react-icons/gr";
 import { GoGear } from "react-icons/go";
 import { RxTrackNext } from "react-icons/rx";
 import { MdDone } from "react-icons/md";
-import ProgressBar from "../ProgressBar"
+import ProgressBar from '@ramonak/react-progress-bar';
+
 
 
 function PomodoroSection() {
@@ -20,8 +21,13 @@ function PomodoroSection() {
                 <GrPowerReset />
                 <RxTrackNext />
                 <MdDone />
+                
             </div>
-            <ProgressBar/>
+            <ProgressBar
+             completed={10}
+             className={styles.progressBar}
+             bgColor='#397097'
+              />
         </div>
     )
 }
