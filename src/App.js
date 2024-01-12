@@ -1,4 +1,5 @@
 import './App.css';
+
 import MainContainer from './components/MainContainer';
 import { useState, useEffect } from 'react';
 
@@ -7,6 +8,15 @@ function App() {
   document.documentElement.style.backgroundColor = '#397097';
 
   const [quotes, setQuotes] = useState(false)
+  const [data, setData] = useState({
+    type: 'greeting',
+    time: '21:59:52',
+    temp: '26',
+    greetingMsg: 'Boa Noite',
+    city: 'Santana de Parnaiba',
+    author: 'Leopoldo',
+    quote: 'pra morrer basta estar vivo'
+  })
 
   useEffect(()=>{
 
@@ -22,21 +32,22 @@ function App() {
 
   },[])
 
-  const generalData = {
-    type: 'GoodByeSection',
-    time: '21:59:52',
-    temp: '26',
-    greetingMsg: 'Boa Noite',
-    city: 'Santana de Parnaiba',
-    author: 'Leopoldo',
-    quote: 'pra morrer basta estar vivo'
-  }
+  console.log(data.greetingMsg)
+
+  const updateType = () => {
+    setData((prevData) => ({
+      ...prevData, 
+      type: 'loading',
+    }));
+  };
+
 
   return (
     <div className="App">
 
-      <MainContainer data={generalData} />
-           
+      <MainContainer data={data} />
+      <button onClick={updateType}>change</button>
+      
     </div>
   );
 }

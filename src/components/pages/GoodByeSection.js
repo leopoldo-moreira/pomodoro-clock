@@ -1,4 +1,3 @@
-import styles from './ChoosePeriods.module.css'
 
 function GoodByeSection(){
     return(
