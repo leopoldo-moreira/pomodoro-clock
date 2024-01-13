@@ -1,73 +1,81 @@
 import styles from './MainContainer.module.css'
-import Loading from './Loading'
-import Greeting from './pages/Greeting'
-import QuoteSection from './pages/QuoteSection'
-import ChooseActivity from './pages/ChooseActivity'
 import { FaArrowLeft } from "react-icons/fa";
-import TimeSection from './pages/TimeSection'
-import ChoosePeriods from './pages/ChoosePeriods'
-import WannaMusic from './pages/WannaMusic'
+
+import GreetingSection from './pages/GreetingSection'
+import ChooseActivitySection from './pages/ChooseActivitySection'
+import SetTimeSection from './pages/SetTimeSection'
+import ChoosePeriodsSection from './pages/ChoosePeriodsSection'
+import WannaMusicSection from './pages/WannaMusicSection'
+import Loading from './Loading'
+import QuoteSection from './pages/QuoteSection'
 import PomodoroSection from './pages/PomodoroSection'
 import GoodByeSection from './pages/GoodByeSection'
 
-
 function MainContainer({ data }) {
-    
-        return (
+
+    const notBackArrow = [
+        1, // 1# GreetingSection
+        6, // 6# QuoteSection
+        7, // 7# PomodoroSection
+        8 // 8# GoodByeSection
+    ]
+
+    return (
         <div className={styles.mainContainer}>
-            {/*TODO fazer uma funcao para saber quando usar o botao "voltar"*/}
-            { data.type !== "greeting" &&  data.type !=="quote" && data.type !== 'GoodByeSection' && data.type && data.type !== "PomodoroSection" &&
-                <FaArrowLeft className={styles.backArrow}/>
+
+            { // Display backArrow
+                !notBackArrow.includes(data.page) &&
+                    <FaArrowLeft
+                    onClick={data.functions.previouslyPage}
+                    className={styles.backArrow}
+                    />
             }
 
-            {
-                data.type === "quote" && (
+            { // 1# GreetingSection
+                data.page === 1 && (
+                    <GreetingSection data={data} />
+                )
+            }
+
+            { // 2# ChooseActivitySection
+                data.page === 2 && (
+                    <ChooseActivitySection data={data} />
+                )
+            }
+
+            { // 3# SetTimeSection
+                data.page === 3 && (
+                    <SetTimeSection data={data} />
+                )
+            }
+
+            { // 4# ChoosePeriodsSection
+                data.page === 4 && (
+                    <ChoosePeriodsSection data={data} />
+                )
+            }
+
+            { // 5# WannaMusicSection
+                data.page === 5 && (
+                    <WannaMusicSection data={data} />
+                )
+            }
+            
+            { // 6# QuoteSection
+                data.page === 6 && (
                     <QuoteSection data={data} />
                 )
             }
-
-            {data.type === "loading" && <Loading />}
-
-
-            {
-                data.type === "greeting" && (
-                    <Greeting data={data} />
+            
+            { // 7# PomodoroSection
+                data.page === 7 && (
+                    <PomodoroSection data={data} />
                 )
             }
 
-            {
-                data.type === "activity" && (                                        
-                    <ChooseActivity data={data}/>                    
-                )
-            }
-
-            {
-                data.type === "timeSection" && (                                        
-                    <TimeSection data={data}/>
-                )
-            }
-
-            {
-                data.type === "periods" && (                                        
-                    <ChoosePeriods data={data}/>
-                )
-            }
-
-            {
-                data.type === "music" && (                                        
-                    <WannaMusic data={data}/>
-                )
-            }
-
-            {
-                data.type === "PomodoroSection" && (                                        
-                    <PomodoroSection data={data}/>
-                )
-            }
-
-            {
-                data.type === "GoodByeSection" && (                                        
-                    <GoodByeSection data={data}/>
+            { // 8# GoodByeSection
+                data.page === 8 && (
+                    <GoodByeSection data={data} />
                 )
             }
 

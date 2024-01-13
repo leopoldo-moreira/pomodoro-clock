@@ -1,7 +1,7 @@
-import styles from './Greeting.module.css'
+import styles from './GreetingSection.module.css'
 import Button from '../Button'
 
-function Greeting({data}) {
+function GreetingSection({data}) {
     return (
         <>
             <div className={styles.dateAndTime}>
@@ -10,9 +10,9 @@ function Greeting({data}) {
                 <div><span>{data.temp} °C</span></div>
             </div>
             <h1 className={styles.title}>{data.greetingMsg}</h1>
-            <Button text="Começar agora"/>
+            <Button clickFunc={data.functions.nextPage} text="Começar agora"/>
         </>
     )
 }
 
-export default Greeting
+export default GreetingSection

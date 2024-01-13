@@ -1,23 +1,23 @@
-import styles from './TimeSection.module.css'
+import styles from './SetTimeSection.module.css'
 import InputNumber from '../InputNumber'
 import Button from '../Button'
 
 
-function TimeSection(){
+function SetTimeSection({data}){
     return(
         <>
             <h1>Personalize seu período de estudo</h1>
             <div className={styles.inputsContainer}>
-                <InputNumber text="Pomodoro" setValue='25'/>
-                <InputNumber text="Pausa" setValue='5'/>
-                <InputNumber text="Pausa Longa" setValue='15'/>                
+                <InputNumber  text="Pomodoro" setValue='25'/>
+                <InputNumber  text="Pausa" setValue='5'/>
+                <InputNumber  text="Pausa Longa" setValue='15'/>                
             </div> 
             <span className={styles.noPause}>Não definir periodo de pausa</span>
             <div className={styles.continueBtn}>
-                <Button text="Continuar"/> 
+                <Button clickFunc={data.functions.nextPage} text="Continuar"/> 
             </div>          
         </>
     )
 }
 
-export default TimeSection
+export default SetTimeSection

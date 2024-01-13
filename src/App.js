@@ -9,13 +9,17 @@ function App() {
 
   const [quotes, setQuotes] = useState(false)
   const [data, setData] = useState({
-    type: 'greeting',
+    page: 1,
     time: '21:59:52',
     temp: '26',
     greetingMsg: 'Boa Noite',
     city: 'Santana de Parnaiba',
     author: 'Leopoldo',
-    quote: 'pra morrer basta estar vivo'
+    quote: 'pra morrer basta estar vivo',
+    functions: {
+      nextPage: nextPage,
+      previouslyPage: previouslyPage
+    }
   })
 
   useEffect(()=>{
@@ -31,22 +35,33 @@ function App() {
     .catch(err => console.log(err))
 
   },[])
+  
 
-  console.log(data.greetingMsg)
+  function nextPage(e) {
+    setData((prevData) => {
+      const newPage = prevData.page === 9 ? 1 : prevData.page + 1;
 
-  const updateType = () => {
-    setData((prevData) => ({
-      ...prevData, 
-      type: 'loading',
-    }));
-  };
+      return {
+        ...prevData,
+        page: newPage,
+      };
+    });
+  }
 
+  function previouslyPage(){
+    setData((prevData) => {
+      return {...prevData, page: prevData.page -1}
+    })    
+  }
+
+  
+  console.log(data.page)
 
   return (
     <div className="App">
 
       <MainContainer data={data} />
-      <button onClick={updateType}>change</button>
+      <button id="teste" onClick={data.functions.nextPage}>change</button>
       
     </div>
   );
