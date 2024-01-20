@@ -40,9 +40,13 @@ span{
     font-size: 20px;    
 }
 
-h1{
+h1,h2{
     color: white;
     font-family: Montserrat, sans-serif;
     font-size: 34px;
     text-align: center;
+}
+
+h2{    
+    font-size: 28px;    
 }

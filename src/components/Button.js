@@ -1,8 +1,13 @@
 import styles from './Button.module.css'
 
-function Button({text,clickFunc}){
+function Button({text,clickFunc,id}){
     return (
-        <button onClick={clickFunc} className={styles.button}>{text}</button>
+        <button 
+        id={id}
+        onClick={clickFunc} 
+        className={styles.button}>
+        {text}
+        </button>
     )
 }
 

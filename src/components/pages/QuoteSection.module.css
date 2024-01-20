@@ -1,8 +1,13 @@
-.quotes{
+.quotesContainer{
     margin: 5em auto;
+    padding: 2em 2em;
 }
 
-.quotes span{    
-    float: right;    
-    margin-top: 2em;
+.quotesContainer h1{
+    text-align: justify;
+}
+
+.quotesContainer span{    
+    float: right;
+    margin-top: 2em;    
 }

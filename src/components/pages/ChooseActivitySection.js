@@ -5,14 +5,22 @@ import styles from './ChooseActivitySection.module.css'
 
 
 function ChooseActivitySection({ data }) {
+
+    function setActivity(e){
+        const newActivity = e.target.innerText.toLowerCase()
+        data.functions.changeData('currentActivity', newActivity)
+        data.functions.nextPage()
+    }
+
+    
+
     return (
         <>
             <h1>O que vou fazer hoje?</h1>
-
             <div className={styles.activityButtons}>
-                <Button clickFunc={data.functions.nextPage} text='Jogar'  />  
-                <Button clickFunc={data.functions.nextPage} text='Trabalhar'  />                  
-                <Button clickFunc={data.functions.nextPage} text='Estudar'  />    
+                <Button clickFunc={setActivity} text='Jogar'  />  
+                <Button clickFunc={setActivity} text='Trabalhar'  />                  
+                <Button clickFunc={setActivity} text='Estudar'  />    
             </div>
             
         </>

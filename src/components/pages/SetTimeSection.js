@@ -3,14 +3,35 @@ import InputNumber from '../InputNumber'
 import Button from '../Button'
 
 
-function SetTimeSection({data}){
+function SetTimeSection({ data }){
+
+    function handleInput(e){        
+        const index = e.target.name
+        const newValue = e.target.value
+        data.functions.changePomodoro(index, newValue)
+    }
+
+    const inputName = [
+        'Pomodoro',
+        'Pausa',
+        'Pausa Longa'
+    ]    
+
     return(
         <>
-            <h1>Personalize seu período de estudo</h1>
-            <div className={styles.inputsContainer}>
-                <InputNumber  text="Pomodoro" setValue='25'/>
-                <InputNumber  text="Pausa" setValue='5'/>
-                <InputNumber  text="Pausa Longa" setValue='15'/>                
+            <h1>Personalize seu período de {data.currentActivity}</h1>
+            <div className={styles.inputsContainer}>                
+
+                {inputName.map((item, index) => (
+                    <InputNumber 
+                    name={index}
+                    funcOnChange={handleInput} 
+                    text={item} 
+                    key={index} 
+                    setValue={data.pomodoroTimer[index]}                        
+                    />
+                ))}
+
             </div> 
             <span className={styles.noPause}>Não definir periodo de pausa</span>
             <div className={styles.continueBtn}>
