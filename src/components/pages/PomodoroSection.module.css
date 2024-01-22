@@ -41,5 +41,6 @@
     width: 100%;
     position: relative;
     top: 30px;
+    min-width: 600px;
     
 }

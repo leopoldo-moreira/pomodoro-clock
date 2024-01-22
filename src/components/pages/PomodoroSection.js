@@ -19,7 +19,12 @@ function PomodoroSection({ data }) {
     const [turnControler, setTurnControler] = useState(true)
     const [workTime, setWorkTime] = useState(true)
 
-    newProgress === 100 && data.functions.nextPage()
+    newProgress === 100 && data.functions.changeData('page', 8)
+
+    const nextActivity = () => {
+        setWorkTime(!workTime)
+        pauseTimer()
+    }
 
     const progressBar = () => {
 
@@ -76,8 +81,8 @@ function PomodoroSection({ data }) {
         }
     };
 
-    const timeToWork = 5000 //data.pomodoroTimer[0] * 60 * 1000;      
-    const timeToPause = 2000
+    const timeToWork = data.pomodoroTimer[0] * 60 * 1000;      
+    const timeToPause = data.pomodoroTimer[1] * 60 * 1000; 
 
     return (
         <div className={styles.counterContainer}>
@@ -93,11 +98,11 @@ function PomodoroSection({ data }) {
                 <CiPlay1 onClick={startTimer} />
                 <CiPause1 onClick={pauseTimer} />
                 <GrPowerReset onClick={resetTimer} />
-                <RxTrackNext />
+                <RxTrackNext onClick={nextActivity} />
                 <MdDone onClick={data.functions.nextPage} />
 
             </div>
-            <button onClick={progressBar}> teste progress</button>
+            
             <ProgressBar
                 completed={newProgress}
                 className={styles.progressBar}
