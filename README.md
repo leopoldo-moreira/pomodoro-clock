@@ -16,9 +16,7 @@
  ![via GIPHY](https://media.giphy.com/media/O5G3ZSG3VyNhqSfVD2/giphy.gif)  
  
 <h2>🚀 Instalação do Costs</h2>
-<p>Siga essas etapas para instalar o Costs localmente</p>
-
-<br>
+<p>Siga essas etapas para instalar o Pomodoro Clock localmente</p>
 
 Clone do repositório
 <br>
